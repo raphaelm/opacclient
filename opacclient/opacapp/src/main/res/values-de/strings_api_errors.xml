@@ -100,4 +100,5 @@
   <string name="renewed">%dx verlängert</string>
   <string name="not_yet_renewable">noch nicht verlängerbar</string>
   <string name="renew_ill_separately">Fernleihmedien bitte einzeln verlängern.</string>
+  <string name="inquire_availability">Verfügbarkeit bitte &lt;a href="%s">hier&lt;/a> erfragen</string>
 </resources>

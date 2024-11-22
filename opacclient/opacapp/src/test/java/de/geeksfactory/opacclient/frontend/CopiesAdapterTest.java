@@ -17,7 +17,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.Shadows;
 
 import de.geeksfactory.opacclient.R;

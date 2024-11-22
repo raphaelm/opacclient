@@ -204,6 +204,10 @@ class SLUBAccountTest : BaseHtmlTest() {
 class SLUBSearchTest : BaseHtmlTest() {
     private var slub = SLUB()
 
+    init {
+        slub.stringProvider = DummyStringProvider()
+    }
+
     @Test
     fun testParseEmptySearchResults() {
         val json = JSONObject(readResource("/slub/search/empty-search.json"))
@@ -280,6 +284,43 @@ class SLUBSearchTest : BaseHtmlTest() {
         val item = slub.parseResultById(json)
 
         //details are in unspecified order, see https://stackoverflow.com/a/4920304/3944322
+        assertThat(item, sameBeanAs(expected).ignoring("details"))
+        assertThat(HashSet(item.details), sameBeanAs(HashSet(expected.details)))
+    }
+
+    @Test
+    fun testParseResultByIdWithoutStatusphrase() {
+        val json = JSONObject(readResource("/slub/search/item_inquery_availability.json"))
+        val expected = DetailedItem().apply {
+            addDetail(Detail("Medientyp", "Buch"))
+            addDetail(Detail("Titel", "Astronomie: die kosmische Perspektive"))
+            title = "Astronomie: die kosmische Perspektive"
+            addDetail(Detail("Beteiligte",
+                    "Bennett, Jeffrey O. [Sonstige Person, Familie und Körperschaft]; Lesch, Harald [Hrsg.]"))
+            addDetail(Detail("Erschienen", "München [u.a.] Pearson 2010 "))
+            addDetail(Detail("Erschienen in", "Always learning"))
+            addDetail(Detail("ISBN", "9783827373601; 3827373603"))
+            addDetail(Detail("Sprache", "Deutsch; Englisch"))
+            addDetail(Detail("Schlagwörter", "Astronomie"))
+            addDetail(Detail("Beschreibung",
+                    "CD-ROM-Beil. enth.: Planetariumssoftware SkyGazer Educational-Edition; " +
+                    "Hier auch später erschienene, unveränderte Nachdrucke; " +
+                    "Auflagenzählung bezieht sich auf die engl. Orig.-Ausg"))
+            addDetail(Detail("Inhaltsverzeichnis", "http://d-nb.info/992365538/04"))
+            addDetail(Detail("Cover", "http://swbplus.bsz-bw.de/bsz304732311cov.htm"))
+            id = "id/0-590996231"
+            copies = arrayListOf(Copy().apply {
+                barcode = "34163775"
+                department = ""
+                branch = "Zentralbibliothek"
+                status = "inquire_availability https://tu-dresden.de/bu/umwelt/geo/ipg/astro"
+                statusCode = SearchResult.Status.UNKNOWN
+                shelfmark = "US 1020 B471(5)"
+            })
+        }
+
+        val item = slub.parseResultById(json)
+
         assertThat(item, sameBeanAs(expected).ignoring("details"))
         assertThat(HashSet(item.details), sameBeanAs(HashSet(expected.details)))
     }

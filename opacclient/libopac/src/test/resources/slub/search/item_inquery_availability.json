@@ -1,0 +1,89 @@
+{
+  "record": {
+    "format": "Buch",
+    "title": "Astronomie: die kosmische Perspektive",
+    "contributor": [
+      "Bennett, Jeffrey O. [Sonstige Person, Familie und Körperschaft]",
+      "Lesch, Harald [Hrsg.]"
+    ],
+    "publisher": [
+      "München [u.a.] Pearson 2010 "
+    ],
+    "ispartof": [
+      {
+        "title": "Always learning"
+      }
+    ],
+    "identifier": [
+      "9783827373601",
+      "3827373603"
+    ],
+    "language": [
+      "Deutsch",
+      "Englisch"
+    ],
+    "subject": [
+      "Astronomie"
+    ],
+    "description": [
+      "CD-ROM-Beil. enth.: Planetariumssoftware SkyGazer Educational-Edition",
+      "Hier auch sp&auml;ter erschienene, unver&auml;nderte Nachdrucke",
+      "Auflagenz&auml;hlung bezieht sich auf die engl. Orig.-Ausg"
+    ],
+    "status": "",
+    "rvk": ""
+  },
+  "id": "0-590996231",
+  "oa": 0,
+  "thumbnail": "",
+  "links": [
+    {
+      "uri": "http://d-nb.info/992365538/04",
+      "note": "",
+      "material": "Inhaltsverzeichnis"
+    },
+    {
+      "uri": "http://swbplus.bsz-bw.de/bsz304732311cov.htm",
+      "note": "",
+      "material": "Cover"
+    }
+  ],
+  "linksRelated": [
+    {
+      "uri": "http://d-nb.info/992365538/04",
+      "hostLabel": "",
+      "note": "",
+      "material": "Inhaltsverzeichnis"
+    },
+    {
+      "uri": "http://swbplus.bsz-bw.de/bsz304732311cov.htm",
+      "hostLabel": "",
+      "note": "",
+      "material": "Cover"
+    }
+  ],
+  "linksAccess": [],
+  "linksGeneral": [],
+  "references": [],
+  "copies": [
+    {
+      "barcode": "34163775",
+      "location": "Zentralbibliothek",
+      "location_code": "zell1",
+      "sublocation": "",
+      "shelfmark": "US 1020 B471(5)",
+      "mediatype": "B",
+      "3d": "",
+      "3d_link": "",
+      "issue": "",
+      "colorcode": "0",
+      "statusphrase": "",
+      "link": "https://tu-dresden.de/bu/umwelt/geo/ipg/astro",
+      "status": "H",
+      "duedate": "",
+      "vormerken": "0",
+      "bestellen": "0"
+    }
+  ],
+  "parts": {}
+}

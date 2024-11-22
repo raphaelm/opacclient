@@ -101,4 +101,5 @@
     <string name="renewed">%dx renewed</string>
     <string name="not_yet_renewable">not yet renewable</string>
     <string name="renew_ill_separately">Please renew interlibrary loan items separately.</string>
+    <string name="inquire_availability">Please inquire about availability &lt;a href="%s">here&lt;/a></string>
 </resources>

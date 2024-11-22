@@ -203,7 +203,18 @@ open class SLUB : OkHttpBaseApi() {
                         branch = it.getString("location")
                         department = Parser.unescapeEntities(it.getString("sublocation"), false)
                         shelfmark = it.getString("shelfmark")
-                        status = Jsoup.parse(it.getString("statusphrase")).text()
+                        it.getString("statusphrase").run {
+                            if (isNotEmpty()) {
+                                status = Parser.unescapeEntities(this, false)
+                            } else {
+                                it.getString("link").run {
+                                    if(isNotEmpty()){
+                                        status = stringProvider.getFormattedString(
+                                                StringProvider.INQUIRE_AVAILABILITY, this )
+                                    }
+                                }
+                            }
+                        }
                         statusCode = colorcodes.getOrElse(it.getString("colorcode")) { SearchResult.Status.UNKNOWN }
                         it.getString("duedate").run {
                             if (isNotEmpty()) {
