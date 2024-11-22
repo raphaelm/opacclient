@@ -1175,7 +1175,7 @@ public class VuFind extends OkHttpBaseApi {
                 Element due = record.select(
                         "strong:contains(Rückgabedatum), strong:contains(Due date), " +
                                 "strong:contains(Fecha de Vencimiento), strong:contains(Délais " +
-                                "d'emprunt), strong:contains(Data di scadenza)")
+                                "d\\'emprunt), strong:contains(Data di scadenza)")
                                     .first();
                 if (due != null) {
                     String text = due.text().replaceAll("[^\\d.]", "");

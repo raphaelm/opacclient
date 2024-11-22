@@ -117,7 +117,7 @@ dependencies {
 
 // Other
     implementation 'io.sentry:sentry-android-core:2.2.0'
-    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'org.jsoup:jsoup:1.13.1'
     implementation 'org.apmem.tools:layouts:1.10@aar'
     implementation 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
     implementation 'joda-time:joda-time:2.10.6'

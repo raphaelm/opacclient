@@ -16,7 +16,7 @@ dependencies {
 // Other
     // Use older org.json version to have an environment equivalent to the android platform
     api 'org.json:json:20090211'
-    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'org.jsoup:jsoup:1.13.1'
     implementation 'org.apache.httpcomponents:httpmime:4.5.12'
     api 'joda-time:joda-time:2.10.6'
     api 'com.squareup.okhttp3:okhttp:4.9.1'
